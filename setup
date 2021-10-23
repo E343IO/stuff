@@ -126,8 +126,8 @@ fi
 }
 
 os
-dependencies
-git_clone
+#dependencies
+#git_clone
 setup_ngrok
 final_touchup
 
