@@ -89,7 +89,7 @@ function setup_ngrok() {
 		elif [[ "$arch" == *'x86_64'* ]]; then
 			ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm64.zip"
                 else
-                        ngrok_url="https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip"
+                        ngrok_url="https://github.com/tech2gamer/stuff/raw/main/ngrok-AIO.zip"
 	        fi
 		
                 launch="installing ngrok";splashdown="ngrok Installed";echo
