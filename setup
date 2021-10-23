@@ -93,7 +93,7 @@ function setup_ngrok() {
 	        fi
 		
                 launch="installing ngrok";splashdown="ngrok Installed";echo
-		(wget --quiet ${ngrok_url} -O ngrok.zip)& spinner
+		(wget --quiet $ngrok_url -O ngrok.zip) & spinner
 		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
         fi
 }
@@ -106,6 +106,7 @@ function final_touchup() {
 
 	done
 if [ ${OS} != "DEBIAN" ]; then
+        sleep 20
 	clear
 	dialog --title "© SHARK 2021-2022" --inputbox  "🔵Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
         mv authtk ${BIN}
@@ -127,7 +128,7 @@ fi
 
 os
 dependencies
-git_clone
+#git_clone
 setup_ngrok
 final_touchup
 
