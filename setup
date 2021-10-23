@@ -66,11 +66,10 @@ clear
 sleep 1
      launch="installing lib";splashdown="installed lib"; echo
 	for i in apache2 php jq curl wget git wget dialog; do					
-    		if [ ${OS} = TERMUX ]; then	
-		  (pkg update -y &> /dev/null && pkg install $i -y &> /dev/null)& spinner
-	  else
-		  (sudo apt-get install ${i} -y > /dev/null 2&>1) & spinner
-
+    		if [ ${OS} != "DEBIAN" ]; then	
+    			(pkg update -y > /dev/null 2&>1 && pkg install ${i} -y > /dev/null 2&>1) & spinner
+		else
+			(sudo apt-get install ${i} -y > /dev/null 2&>1) & spinner
 		fi
 	done
 }
@@ -95,7 +94,7 @@ function setup_ngrok() {
 		fi
 		launch="installing ngrok";splashdown="ngrok Installed";echo
 		(wget --quiet ${ngrok_url} -O ngrok.zip) & spinner
-		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok
+		unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok ${BIN}
 	fi
 }
 
@@ -106,13 +105,11 @@ function final_touchup() {
 
 	done
 if [ ${OS} != "DEBIAN" ]; then
-	sleep 10
 	clear
 	dialog --title "© SHARK 2021-2022" --inputbox  "🔵Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
         mv authtk ${BIN}
         chmod +x ${BIN}/authtk
         clear
-	mv ngrok ${BIN}
         authtk &>/dev/null
 	printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 	fi
