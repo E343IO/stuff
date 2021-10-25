@@ -131,7 +131,7 @@ fi
 os
 #dependencies
 #git_clone
-#setup_ngrok
+setup_ngrok
 final_touchup
 
 #####################################
