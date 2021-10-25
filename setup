@@ -106,13 +106,17 @@ function final_touchup() {
 
 	done
 if [ ${OS} != "DEBIAN" ]; then
-	clear
-	dialog --title "© SHARK 2021-2022" --inputbox  "🔵Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
-        mv authtk ${BIN}
-        chmod +x ${BIN}/authtk
-        clear
-        authtk &>/dev/null
- export user=$HOME
+clear
+dialog --title "© SHARK 2021-2022" --inputbox  "🔵Ngrok Authtoken verification \nEnter your authtoken without './' :" 0 0 2> authtk
+mv authtk ${BIN}
+chmod +x ${BIN}/authtk
+clear
+authtk &>/dev/null
+export user=$HOME
+authtk
+break
+exit 1
+        
 	printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 else 
         clear
