@@ -114,8 +114,6 @@ clear
 authtk &>/dev/null
 export user=$HOME
 authtk
-break
-exit 1
         
 	printf "\n${green}>>${white} simply run : shark \n\n ${nc}"
 else 
