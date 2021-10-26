@@ -132,7 +132,7 @@ os
 #dependencies
 #git_clone
 setup_ngrok
-final_touchup
+#final_touchup
 
 #####################################
 #       DON'T TRY TO COPY 😂😂     #
