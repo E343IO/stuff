@@ -46,11 +46,13 @@ function os () {
 	if [ "$?" -eq "0" ]; then
 		OS=DEBIAN 
 		BIN="/usr/bin"
-		main="/usr/share/shark"			
+		main="/usr/share/shark"
+               	SUSR="sudo"	
 	else
 		OS=TERMUX
 		BIN="${PREFIX}/bin"
 		main="${PREFIX}/share/shark"
+                SUSR=""
 	fi
 }
 
@@ -94,7 +96,7 @@ function setup_ngrok() {
 		
                 launch="installing ngrok";splashdown="ngrok Installed";echo
 		(wget --quiet $ngrok_url -O ngrok.zip) & spinner
-		#unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
+		${SUSR} unzip -q ngrok.zip && rm -rf ngrok.zip && chmod +x ngrok && mv ngrok $BIN
         fi
 }
 
