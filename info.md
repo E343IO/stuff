@@ -1,8 +1,9 @@
 <h1 align="center">Hi 👋, I'm Mr.Derek</h1>
-<h3 align="center">👨‍💻Beginner in github and IT Field. Dream to be a pilot of an aircraft and craze to be a OSCP.👨‍💻</h3>
+
+<h3 align="center">👨‍💻Beginner in github and IT Field. Dream to be a pilot of an aircraft and craze to be a 🇮🇳.👨‍💻</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=tech2gamer&label=Profile%20views&color=0e75b6&style=flat" alt="#didnt copy" /> </p>
-###
+
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=E343IO" alt="Me.Derek" /></a> </p>
 
 - 🔭 I’m Student (still learning!) [My First tool.](https://github.com/tech2gamer/shorturl)
